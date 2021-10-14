@@ -56,15 +56,39 @@
 		BA86649827187DD300AB391A /* Mmo Games */ = {
 			isa = PBXGroup;
 			children = (
+				BA8664AE271882BE00AB391A /* Models */,
+				BA8664AD271882B900AB391A /* Controllers */,
 				BA86649927187DD300AB391A /* AppDelegate.swift */,
 				BA86649B27187DD300AB391A /* SceneDelegate.swift */,
-				BA86649D27187DD300AB391A /* ViewController.swift */,
-				BA86649F27187DD300AB391A /* Main.storyboard */,
+				BA8664AF271882ED00AB391A /* Views */,
 				BA8664A227187DD600AB391A /* Assets.xcassets */,
 				BA8664A427187DD600AB391A /* LaunchScreen.storyboard */,
 				BA8664A727187DD600AB391A /* Info.plist */,
 			);
 			path = "Mmo Games";
+			sourceTree = "<group>";
+		};
+		BA8664AD271882B900AB391A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BA86649D27187DD300AB391A /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BA8664AE271882BE00AB391A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BA8664AF271882ED00AB391A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BA86649F27187DD300AB391A /* Main.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
