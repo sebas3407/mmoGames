@@ -8,6 +8,21 @@
 import UIKit
 
 class GameListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var gamesTableView: UITableView!
+    
+    var games: [Game] = []
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        loadGames()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let game = games[indexPath.row]
+        print("El juego seleccionado es \(game.title)")
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return games.count
     }
@@ -20,14 +35,6 @@ class GameListViewController: UIViewController, UITableViewDelegate, UITableView
         return cell
     }
     
-    @IBOutlet weak var gamesTableView: UITableView!
-    
-    var games: [Game] = []
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        loadGames()
-    }
     
     func loadGames() {
         let urlString = "https://www.mmobomb.com/api1/games"
@@ -49,8 +56,18 @@ class GameListViewController: UIViewController, UITableViewDelegate, UITableView
                 
             } catch let jsonError {
                 print(jsonError)
+                self.showDownloadError()
             }
             
             }.resume()
+    }
+    
+    func showDownloadError(){
+        let alertController = UIAlertController(title: "Se ha producido un error al obtener los datos", message: nil, preferredStyle: .alert)
+
+        let cancelAction = UIAlertAction(title: "Aceptar", style: .default)
+        
+        alertController.addAction(cancelAction)
+        self.present(alertController, animated: true, completion: nil)
     }
 }

@@ -1,23 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5fm-lU-DYH">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Bold.ttf">
+            <string>Montserrat-Bold</string>
+        </array>
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Game List View Controller-->
         <scene sceneID="Xm4-EM-HAg">
             <objects>
                 <viewController storyboardIdentifier="GameListVC" id="q8s-Bm-EkV" customClass="GameListViewController" customModule="Mmo_Games" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="En3-CU-aED">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="BwK-F5-UBw">
-                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <rect key="frame" x="0.0" y="44" width="390" height="766"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="q8s-Bm-EkV" id="xF3-0v-4eE"/>
@@ -48,41 +56,41 @@
             <objects>
                 <viewController id="5fm-lU-DYH" customClass="ViewController" customModule="Mmo_Games" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CeM-gr-aa8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="6XI-bl-rmV" userLabel="Background">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="812"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="emoji" translatesAutoresizingMaskIntoConstraints="NO" id="UIN-ae-wtc" userLabel="GirlBackground">
-                                <rect key="frame" x="-23" y="195.66666666666663" width="421" height="421"/>
+                                <rect key="frame" x="-15.666666666666657" y="211.66666666666663" width="421.33333333333326" height="421"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgrounWhite" translatesAutoresizingMaskIntoConstraints="NO" id="yUD-vF-hnA">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sebastian Ortiz Velez" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L03-NS-3Hz">
-                                <rect key="frame" x="20" y="559" width="287" height="84"/>
+                                <rect key="frame" x="20" y="591" width="302" height="84"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
                                 <color key="textColor" red="0.89019607840000003" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sebasortiz2000@gmail.com " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htW-Rx-Ara">
-                                <rect key="frame" x="19.999999999999986" y="518" width="232.66666666666663" height="22"/>
+                                <rect key="frame" x="19.999999999999986" y="550" width="232.66666666666663" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.47058823529999999" green="0.56078431370000004" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14/10/2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWm-p0-OJa">
-                                <rect key="frame" x="20" y="488" width="87.666666666666671" height="22"/>
+                                <rect key="frame" x="20" y="520" width="87.666666666666671" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.47058823529999999" green="0.56078431370000004" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hmU-9b-ejU">
-                                <rect key="frame" x="311" y="671" width="40" height="34"/>
+                                <rect key="frame" x="326" y="703" width="40" height="34"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
-                                    <segue destination="q8s-Bm-EkV" kind="presentation" modalPresentationStyle="fullScreen" id="Osl-EQ-Eqw"/>
+                                    <segue destination="q8s-Bm-EkV" kind="presentation" modalPresentationStyle="fullScreen" id="wi8-om-jw8"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -117,6 +125,70 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vIS-Rc-8vE" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-943.07692307692309" y="47.630331753554501"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="A6G-ls-Ww3">
+            <objects>
+                <viewController storyboardIdentifier="PersonalData" id="3MW-RX-ZkZ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jUq-QC-IgG"/>
+                        <viewControllerLayoutGuide type="bottom" id="JpS-QE-lYI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jHa-w6-CeC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2iC-0c-X1F">
+                                <rect key="frame" x="16" y="44" width="358" height="746"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QvI-gg-vNZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="358" height="766"/>
+                                        <subviews>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="3mh-Hh-7R9">
+                                                <rect key="frame" x="0.0" y="0.0" width="358" height="37"/>
+                                            </activityIndicatorView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Warcraft" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="6Af-C7-nM8">
+                                                <rect key="frame" x="0.0" y="42" width="358" height="23.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="19"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Svx-Ob-6Zd">
+                                                <rect key="frame" x="0.0" y="70.333333333333343" width="358" height="269.66666666666663"/>
+                                                <string key="text">Gather your friends, forge your weapons, and hunt ferocious behemoths in Dauntless, the co-op multiplayer RPG from Phoenix Labs, a studio consisting of developers from some of the biggest MMORPG ever made. Set adrift in a lush fantasy world known as the Shattered Isles, \"Slayers\" must band together to contend with a harsh environment and even harsher enemies Each Slayer can choose his or her weapon and attack style, from lightning-fast sword attacks to powerful axe strikes.</string>
+                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emoji" translatesAutoresizingMaskIntoConstraints="NO" id="rPE-zK-DHc">
+                                                <rect key="frame" x="0.0" y="345" width="358" height="421"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="QvI-gg-vNZ" secondAttribute="bottom" id="0GN-jG-7RI"/>
+                                    <constraint firstItem="QvI-gg-vNZ" firstAttribute="leading" secondItem="2iC-0c-X1F" secondAttribute="leading" id="C7H-YT-Qr1"/>
+                                    <constraint firstItem="QvI-gg-vNZ" firstAttribute="top" secondItem="2iC-0c-X1F" secondAttribute="top" id="dQd-FQ-xqs"/>
+                                    <constraint firstAttribute="trailing" secondItem="QvI-gg-vNZ" secondAttribute="trailing" id="sfs-9z-E9a"/>
+                                    <constraint firstItem="QvI-gg-vNZ" firstAttribute="width" secondItem="2iC-0c-X1F" secondAttribute="width" id="xfl-He-JQf"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="auq-k9-RQn"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2iC-0c-X1F" firstAttribute="trailing" secondItem="jHa-w6-CeC" secondAttribute="trailingMargin" id="4BD-hC-tJW"/>
+                            <constraint firstItem="2iC-0c-X1F" firstAttribute="top" secondItem="jUq-QC-IgG" secondAttribute="bottom" id="IV3-71-73u"/>
+                            <constraint firstItem="JpS-QE-lYI" firstAttribute="top" secondItem="2iC-0c-X1F" secondAttribute="bottom" constant="20" id="gQz-kH-QXF"/>
+                            <constraint firstItem="2iC-0c-X1F" firstAttribute="leading" secondItem="jHa-w6-CeC" secondAttribute="leadingMargin" id="hSl-uT-MFV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="NLs-kw-aqh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kQZ-Lx-Jr0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="783" y="47"/>
         </scene>
     </scenes>
     <resources>
