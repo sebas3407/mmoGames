@@ -21,6 +21,17 @@ class GameListViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let game = games[indexPath.row]
         print("El juego seleccionado es \(game.title)")
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let gameViewController = storyBoard.instantiateViewController(withIdentifier: "GameDetailViewController") as! GameDetailViewController
+        
+        gameViewController.gameTitle = game.title
+        gameViewController.gameDescription = game.shortDescription
+        gameViewController.gameImageUrl = game.thumbnail
+        
+        
+        self.present(gameViewController, animated: true, completion: nil)
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

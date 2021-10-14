@@ -7,23 +7,42 @@
 
 import UIKit
 
+extension UIImageView {
+    func load(url: URL) {
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: url) {
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self?.image = image
+                    }
+                }
+            }
+        }
+    }
+}
+
 class GameDetailViewController: UIViewController {
+
+    
+    @IBOutlet weak var gameTitleLabel: UILabel!
+    @IBOutlet weak var gameDescriptionLabel: UILabel!
+    @IBOutlet weak var gameImage: UIImageView!
+    
+    var gameTitle : String = ""
+    var gameDescription : String = ""
+    var gameImageUrl : String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        gameTitleLabel.text = gameTitle
+        gameDescriptionLabel.text = gameDescription
+        loadImage(filePath: gameImageUrl)
     }
     
+    func loadImage(filePath: String){
+        let fileUrl = URL(string: filePath)
+        gameImage.load(url: fileUrl!)
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
-
 }
