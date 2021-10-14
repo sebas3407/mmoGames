@@ -13,6 +13,8 @@
 		BA8664A127187DD300AB391A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA86649F27187DD300AB391A /* Main.storyboard */; };
 		BA8664A327187DD600AB391A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA8664A227187DD600AB391A /* Assets.xcassets */; };
 		BA8664A627187DD600AB391A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA8664A427187DD600AB391A /* LaunchScreen.storyboard */; };
+		BA8664B12718846300AB391A /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8664B02718846300AB391A /* Game.swift */; };
+		BA8664B5271887FB00AB391A /* GameListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8664B4271887FB00AB391A /* GameListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		BA8664A227187DD600AB391A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA8664A527187DD600AB391A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA8664A727187DD600AB391A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA8664B02718846300AB391A /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		BA8664B4271887FB00AB391A /* GameListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +62,10 @@
 			children = (
 				BA8664AE271882BE00AB391A /* Models */,
 				BA8664AD271882B900AB391A /* Controllers */,
-				BA86649927187DD300AB391A /* AppDelegate.swift */,
-				BA86649B27187DD300AB391A /* SceneDelegate.swift */,
 				BA8664AF271882ED00AB391A /* Views */,
 				BA8664A227187DD600AB391A /* Assets.xcassets */,
+				BA86649927187DD300AB391A /* AppDelegate.swift */,
+				BA86649B27187DD300AB391A /* SceneDelegate.swift */,
 				BA8664A427187DD600AB391A /* LaunchScreen.storyboard */,
 				BA8664A727187DD600AB391A /* Info.plist */,
 			);
@@ -72,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				BA86649D27187DD300AB391A /* ViewController.swift */,
+				BA8664B4271887FB00AB391A /* GameListViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -79,6 +84,7 @@
 		BA8664AE271882BE00AB391A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BA8664B02718846300AB391A /* Game.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -165,6 +171,8 @@
 				BA86649E27187DD300AB391A /* ViewController.swift in Sources */,
 				BA86649A27187DD300AB391A /* AppDelegate.swift in Sources */,
 				BA86649C27187DD300AB391A /* SceneDelegate.swift in Sources */,
+				BA8664B12718846300AB391A /* Game.swift in Sources */,
+				BA8664B5271887FB00AB391A /* GameListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

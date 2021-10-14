@@ -45,6 +45,9 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Start"/>
+                                <connections>
+                                    <segue destination="q8s-Bm-EkV" kind="presentation" modalPresentationStyle="fullScreen" id="W8b-Wp-48V"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hSE-s3-RDT"/>
@@ -62,33 +65,40 @@
             </objects>
             <point key="canvasLocation" x="-104.61538461538461" y="49.052132701421797"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="OUa-Mv-Pa0">
+        <!--Game List View Controller-->
+        <scene sceneID="Xm4-EM-HAg">
             <objects>
-                <tableViewController id="hty-0o-WJN" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="HCQ-1m-djV">
+                <viewController storyboardIdentifier="GameListVC" id="q8s-Bm-EkV" customClass="GameListViewController" customModule="Mmo_Games" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="En3-CU-aED">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="BwK-F5-UBw">
+                                <rect key="frame" x="0.0" y="44" width="390" height="766"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="q8s-Bm-EkV" id="xF3-0v-4eE"/>
+                                    <outlet property="delegate" destination="q8s-Bm-EkV" id="rVf-yQ-ONm"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7aY-Qa-k52"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="8Rw-Am-vCr">
-                                <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="43.666667938232422"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8Rw-Am-vCr" id="8yp-yP-quU">
-                                    <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="hty-0o-WJN" id="NsS-ZZ-yfT"/>
-                            <outlet property="delegate" destination="hty-0o-WJN" id="Hu8-EW-zLt"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="abf-9L-XKE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <constraints>
+                            <constraint firstItem="BwK-F5-UBw" firstAttribute="top" secondItem="7aY-Qa-k52" secondAttribute="top" id="9f2-NB-sdD"/>
+                            <constraint firstItem="BwK-F5-UBw" firstAttribute="leading" secondItem="7aY-Qa-k52" secondAttribute="leading" id="EBu-rD-ZW1"/>
+                            <constraint firstItem="7aY-Qa-k52" firstAttribute="bottom" secondItem="BwK-F5-UBw" secondAttribute="bottom" id="SK6-3I-dSH"/>
+                            <constraint firstItem="7aY-Qa-k52" firstAttribute="trailing" secondItem="BwK-F5-UBw" secondAttribute="trailing" id="gkF-0y-YXF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="yZt-qu-Heb"/>
+                    <connections>
+                        <outlet property="gamesTableView" destination="BwK-F5-UBw" id="bUh-YE-hQL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AmG-aw-bdJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="659" y="50"/>
+            <point key="canvasLocation" x="821.53846153846155" y="48.341232227488149"/>
         </scene>
     </scenes>
     <resources>
